@@ -1,0 +1,10 @@
+<section id="menu">
+	<ul>
+                <li><a href="{{ MainROOT }}">Main Page</a>
+            	     {{ FOREACH floor IN FLOORS.values.sort('url') }}
+                 <li>
+                     <a href="{{ floor.url }}" name="{{ floor.description }}">{{ floor.name }}</a>
+                 </li>
+            {{ END }}
+	</ul>
+</section>

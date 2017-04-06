@@ -1,0 +1,38 @@
+
+title: مرده
+description: تصور کن که زندگی‌ات در تخیلات یک مگس مرده باشد.
+
+source: http://morder.ir/
+
+name: مرده
+author: امیر مومنیان
+email: nainemom@gmail.com
+
+url: https://miratest.github.io/samplegh/morde
+root: /samplegh/morde/
+
+static: /samplegh/morde/static/
+imageurl: /samplegh/morde/images/
+
+permalink: /:title/
+
+default_markup: markdown
+
+post_num: 5
+archive_post_num: all
+
+template: default-theme
+
+lists:
+ - keywords
+ - jdate
+
+plugins:
+ - Jdate
+
+namespace:
+  خواب: sleep
+  ژن: gene
+  خودخواه: selfish
+  آخر هفته: weekend
+  بهشت: paradise

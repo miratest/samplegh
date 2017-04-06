@@ -1,0 +1,42 @@
+
+
+  {{ INCLUDE header }}
+
+  <header id="header">
+    <img id="header_img" src="{{ MainSTATIC }}/theme/default-theme/img/mira-c.png">
+		<h1><a href="{{ ROOT }}">
+            {{ MainTITLE }}</a>
+		</a></h1>
+		<h5>
+			{{ MainDESCRIPTION }}
+		</h5>
+	</header>
+
+  {{ INCLUDE navbar }}
+
+<div class="container">
+<section id="content" style="width: 100%">
+  {{ FOREACH floor IN FLOORS.values.sort('name') }}
+  <article class="post">
+    <div class="header">
+      <h1><a href="{{ floor.root }}">{{ floor.name }}</a></h1>
+      <h4>{{ floor.description }}</h4>
+<br>
+      <ul>
+      {{ FOREACH post IN floor.posts }}
+        <li>
+            <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </li>
+        {{ post.body.less | remove('<(.*?)>|</(.*?)>') | truncate(100, '...') }}
+      {{ END }}
+      </ul>
+    <div class="clear-both"></div>
+    </div>
+<br>
+  </article>
+  {{ END }}
+</section>
+
+</div>
+
+{{ INCLUDE footer }}

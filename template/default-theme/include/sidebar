@@ -1,0 +1,20 @@
+<section id="sidebar">
+
+  {{ FOREACH archive IN ARCHIVES.pairs }}
+<h5>
+{{ SWITCH archive.key }}
+  {{ CASE 'jdate'}}آرشیو زمانی
+  {{ CASE 'keywords'}}کلمات کلیدی
+{{ END }}
+</h5>
+    <hr>
+    {{ FOREACH item IN archive.value.values.sort('name').sort('number') }}
+      <a href="{{ item.url }}">{{ item.name }}</a>
+      {{ IF archive.key == 'jdate' }}<br>{{ END }}
+      {{ IF (loop.index != loop.max) and (archive.key == 'keywords') }}&nbsp;-&nbsp;{{ END }}
+    {{- END }}
+    <br>
+  {{- END }}
+
+
+</div>
