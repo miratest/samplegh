@@ -14,3 +14,4 @@ deploy:
             token: $GIT_TOKEN
             domain: https://miratest.github.io/samplegh/
             basedir: public
+
