@@ -1,6 +1,9 @@
-box: perl
+box: debian
 build:
     steps:
+        - script:
+            name: Install cpanm
+            code: curl -L https://cpanmin.us | perl - --sudo App::cpanminus
         - script:
             name: Install modules
             code: cpanm -n Mira
