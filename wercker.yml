@@ -8,6 +8,7 @@ build:
             name: Run mira
             code: mira build
             deploy:
+deploy:
     steps:
         - gh-pages:
             token: $GIT_TOKEN
