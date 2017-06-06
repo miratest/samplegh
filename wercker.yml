@@ -1,14 +1,17 @@
-box: debian
+box: perl
 build:
     steps:
-        - install-packages:
-            packages: curl
+
+        - bundle-install
+
         - script:
             name: Install cpanm
             code: curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
         - script:
             name: Install Mira
             code: cpanm -n Mira
+
         - script:
             name: Run mira
             code: mira build
