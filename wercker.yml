@@ -17,11 +17,11 @@ build:
         -script:
             name: add public
             code: |
-            cd public
-            git add .
-            git commit -m 'publish'
-            cd ..
-            git push origin gh-pages
+                cd public
+                git add .
+                git commit -m 'publish'
+                cd ..
+                git push origin gh-pages
 
 deploy:
     steps:
