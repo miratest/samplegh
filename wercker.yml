@@ -8,8 +8,8 @@ build:
             name: Run mira
             code: mira build
             deploy:
-  steps:
-    - gh-pages:
-        token: $GIT_TOKEN
-        domain: https://miratest.github.io/samplegh/
-        basedir: public
+    steps:
+        - gh-pages:
+            token: $GIT_TOKEN
+            domain: https://miratest.github.io/samplegh/
+            basedir: public
