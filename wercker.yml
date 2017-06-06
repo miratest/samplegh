@@ -3,7 +3,7 @@ build:
     steps:
         - script:
             name: Install modules
-            code: cpanm git://github.com/kiamazi/mira.git
+            code: cpanm -n Mira
         - script:
             name: Run mira
             code: mira build
