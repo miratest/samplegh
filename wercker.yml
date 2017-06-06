@@ -3,9 +3,9 @@ build:
     steps:
         - script:
             name: Install cpanm
-            code: curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+            code: wget -L https://cpanmin.us | perl - --sudo App::cpanminus
         - script:
-            name: Install modules
+            name: Install Mira
             code: cpanm -n Mira
         - script:
             name: Run mira
