@@ -14,7 +14,7 @@ build:
             name: Run mira
             code: mira build
 
-        -script:
+        - script:
             name: add public
             code: |
                 cd public
