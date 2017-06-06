@@ -2,8 +2,6 @@ box: perl
 build:
     steps:
 
-        - bundle-install
-
         - script:
             name: Install cpanm
             code: curl -L https://cpanmin.us | perl - --sudo App::cpanminus
@@ -15,6 +13,11 @@ build:
         - script:
             name: Run mira
             code: mira build
+
+        -script:
+            name: push gh-page
+            code: cd public && git add . && git commit -m 'publish && cd .. && 'git push origin gh-pages
+
 deploy:
     steps:
         - lukevivier/gh-pages:
