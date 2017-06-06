@@ -1,4 +1,4 @@
-box: perl
+box: debian
 build:
     steps:
         - script:
@@ -7,11 +7,8 @@ build:
         - script:
             name: Run mira
             code: mira build
-            deploy:
 deploy:
     steps:
         - lukevivier/gh-pages:
-            token: $GIT_TOKEN
-            domain: https://miratest.github.io/samplegh/
+            token: $GITHUB_TOKEN
             basedir: public
-
