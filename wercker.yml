@@ -3,10 +3,6 @@ build:
     steps:
 
         - script:
-            name: Install cpanm
-            code: curl -L https://cpanmin.us | perl - --sudo App::cpanminus
-
-        - script:
             name: Install Mira
             code: cpanm -n Mira
 
@@ -16,4 +12,4 @@ build:
 
         - lukevivier/gh-pages:
             token: $GITHUB_TOKEN
-            basedir: public
+            basedir: public/samplegh
