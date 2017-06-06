@@ -15,8 +15,13 @@ build:
             code: mira build
 
         -script:
-            name: push gh-page
-            code: cd public && git add . && git commit -m 'publish && cd .. && 'git push origin gh-pages
+            name: add public
+            code: |
+            cd public
+            git add .
+            git commit -m 'publish'
+            cd ..
+            git push origin gh-pages
 
 deploy:
     steps:
