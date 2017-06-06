@@ -42,7 +42,7 @@
       {{ IF post.keywords }}
       <h6 class="tags">
 	<i class="fa fa-tags" aria-hidden="true"></i>
-	{{ FOREACH key IN post.keywords.values }}
+	{{ FOREACH key IN post.keywords }}
 	   <a href="{{ key.url }}">#{{ key.name }}</a>
 	{{- END }}
       </h6>

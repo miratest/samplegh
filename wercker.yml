@@ -1,0 +1,9 @@
+box: perl
+build:
+    steps:
+        - script:
+            name: Install modules
+            code: cpan Mira
+        - script:
+            name: Run mira
+            code: mira build
